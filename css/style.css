@@ -1,7 +1,7 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  color: #102731;
 }
 
 .top-buffer{
@@ -10,4 +10,32 @@ body {
 
 .bottom-buffer{
   margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-color: #e6f2f8;
+}
+
+.navbar-inverse {
+  background-color: #102731;
+  color:#e6f2f8;
+}
+
+.btn-primary:hover {
+  background-color: #083c5d;
+  border-color: #fff;
+  color:e6f2f8;
+}
+
+.btn-primary {
+  background-color: #328cc1;
+  border-color: #fff;
+}
+
+a {
+  color: #328cc1;
+}
+
+a:hover {
+  color: #083c5d;
 }
