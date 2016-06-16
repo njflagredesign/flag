@@ -12,7 +12,8 @@ body {
   margin-bottom: 20px;
 }
 
-.jumbotron {
+.jumbotron,
+.blue-flag {
   background-color: #e6f2f8;
 }
 
@@ -38,4 +39,24 @@ a {
 
 a:hover {
   color: #083c5d;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  
+  .flag {
+    margin: 20px auto;
+  }
+  
+  .nj-pix {
+    margin: 0 auto;
+  }
+
+  .top-buffer{
+    margin-top: 0;
+  }
+  
+  .bottom-buffer{
+    margin-bottom: 0;
+  }
 }
