@@ -1,20 +1,28 @@
 body {
   padding-top: 50px;
-  padding-bottom: 20px;
+  color: #102731;
+}
+
+h1, h2, h3, h4, h4, h6 {
   color: #102731;
 }
 
 .top-buffer{
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .bottom-buffer{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .jumbotron,
 .blue-flag {
   background-color: #e6f2f8;
+  padding: 40px;
+}
+
+.blue-flag {
+  width: 100%;
 }
 
 .navbar-inverse {
@@ -25,7 +33,7 @@ body {
 .btn-primary:hover {
   background-color: #083c5d;
   border-color: #fff;
-  color:e6f2f8;
+  color: #e6f2f8;
 }
 
 .btn-primary {
@@ -42,15 +50,30 @@ a:hover {
 }
 
 .pix-cap {
-  width: 640px;  
+  width: 640px;
 }
+
+iframe{
+  border-width: 0px;
+}
+
+footer.jumbotron {
+  margin-bottom: 0;
+}
+
+.mini-flag {
+  max-width: 100px;
+  margin: 60px auto;
+  display: none;
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  
+
   .flag {
     margin: 20px auto;
   }
-  
+
   .nj-pix,
   .pix-cap {
     margin: 0 auto;
@@ -60,8 +83,9 @@ a:hover {
   .top-buffer{
     margin-top: 0;
   }
-  
-  .bottom-buffer{
-    margin-bottom: 0;
+
+  .mini-flag {
+    display: block;
   }
+
 }
