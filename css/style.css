@@ -41,6 +41,9 @@ a:hover {
   color: #083c5d;
 }
 
+.pix-cap {
+  width: 640px;  
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   
@@ -48,8 +51,10 @@ a:hover {
     margin: 20px auto;
   }
   
-  .nj-pix {
+  .nj-pix,
+  .pix-cap {
     margin: 0 auto;
+    max-width: 100%;
   }
 
   .top-buffer{
