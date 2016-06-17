@@ -1,20 +1,21 @@
 body {
   padding-top: 50px;
-  padding-bottom: 20px;
   color: #102731;
 }
 
 .top-buffer{
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .bottom-buffer{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .jumbotron,
 .blue-flag {
   background-color: #e6f2f8;
+  padding: 40px;
+  width: 100%;
 }
 
 .navbar-inverse {
@@ -44,6 +45,10 @@ a:hover {
 .pix-cap {
   width: 640px;  
 }
+
+footer.jumbotron {
+  margin-bottom: 0;
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   
@@ -60,8 +65,5 @@ a:hover {
   .top-buffer{
     margin-top: 0;
   }
-  
-  .bottom-buffer{
-    margin-bottom: 0;
-  }
+
 }
