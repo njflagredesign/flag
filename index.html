@@ -23,7 +23,7 @@
         </div>
       </div>
     </nav>
-    <div class="jumbotron">
+    <section class="jumbotron">
       <div class="container">
         <h1 class="text-center">Every great state</h1>
       <!-- Example row of columns -->
@@ -77,24 +77,24 @@
         </div>
         <h2 class="text-center">Unfortunately, ours needs a little work</h2>
       </div><!-- /container -->
-    </div> <!-- /jumbotron -->
-      
-    <div class="container">
+    </section> <!-- /jumbotron -->
+
+    <section class="container">
       <div class="row text-center bottom-buffer">
-        <div class="col-md-6">
+        <article class="col-md-6">
           <h3>What is so bad about our flag?</h3>
             <p>Brian Donohue from NJ.com explains</p>
             <iframe width="480" height="270" src="https://www.youtube.com/embed/nMSR73coL1M" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
+        </article>
+        <article class="col-md-6">
           <h3>Why is having a great flag important?</h3>
             <p>Check out the TED talk by Roman Mars</p>
             <iframe width="480" height="270" src="https://www.youtube.com/embed/pnv5iKB2hl4" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </article>
       </div>
-    </div> <!-- /container -->
+    </section> <!-- /container -->
 
-    <div class="container blue-flag" >
+    <section class="container blue-flag" >
       <div class="row text-center">
         <div class="col-md-12">
           <h2>What could the replacement look like?</h2>
@@ -104,72 +104,77 @@
           </h3>
         </div>
       </div><!-- row -->
-       
-      <div class="row text-center">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-          <img src="images/flag-1.jpg" class="img-responsive flag" alt="NJ flag option 1">
+
+      <div class="row text-center" >  
+        <div data-bind="foreach: flags" class="flag-row">
+          <div class="col-md-5ths col-sm-6">
+            <img data-bind="attr:{src: image}, click: $parent.updateModal"class="img-responsive flag" /> 
+          </div>
         </div>
-        <div class="col-md-2">
-          <img src="images/flag-2.jpg" class="img-responsive flag" alt="NJ flag option 2">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-3.jpg" class="img-responsive flag" alt="NJ flag option 3">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-4.jpg" class="img-responsive flag" alt="NJ flag option 4">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-5.jpg" class="img-responsive flag" alt="NJ flag option 5">
-        </div>
-        <div class="col-md-1"></div>
       </div><!-- row -->
-        
-      <div class="row text-center top-buffer">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-          <img src="images/flag-6.jpg" class="img-responsive flag" alt="NJ flag option 6">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-7.jpg" class="img-responsive flag" alt="NJ flag option 7">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-8.jpg" class="img-responsive flag" alt="NJ flag option 8">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-9.jpg" class="img-responsive flag" alt="NJ flag option 9">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-10.jpg" class="img-responsive flag" alt="NJ flag option 10">
-        </div>
-        <div class="col-md-1"></div>
-      </div><!-- row -->
-        
-      <div class="row text-center top-buffer">
+      
+      <div class="modal fade" id="flag-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Designed by <span data-bind="text: designer"></span><br>
+                <small><span data-bind="text: location"></span> </small></h4>
+            </div>
+
+            <div class="modal-body">
+              <img data-bind="attr:{src: image}"class="img-responsive flag" />
+                          <hr>
+              <p data-bind="text: description"></p>
+            </div>
+            <div class="modal-footer">
+                <small>Source: 
+                  <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank"><em>Vote for a new flag for New Jersey</em></a>
+                  on <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">NJ.com</a>
+                </small>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <article class="row text-center top-buffer">
         <h2>See more submissions here:
           <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">
             The 100 best NJ flag redesigns on NJ.com
           </a>
         </h2>
-      </div>
-    </div> <!-- /container -->
+      </article>
+    </section> <!-- /container -->
 
-    <div class="container">
+    <section class="container">
       <div class="row text-center bottom-buffer top-buffer">
-        <div class="col-md-6">
+        <article class="col-md-6">
           <h3>See all 300+ contest submissions</h3>
             <iframe width="480" height="270" src="https://www.youtube.com/embed/qjrZ_NuzYZA" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
+        </article>
+        <article class="col-md-6">
           <h3>The winner is unfurled!</h3>
             <iframe width="480" height="270" src="https://www.youtube.com/embed/8_9sawUXuFM" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </article>
       </div>
-    </div> <!-- /container -->      
-      
+    </section> <!-- /container -->
+
     <footer  class="container blue-flag">
         <div class="row text-center bottom-buffer">
-          <div class="col-md-6">
+          <article class="col-md-6">
             <h3>Want to make your own flag?</h3>
             <h4>Get started with</h4>
             <a href="https://andrewsarnold.github.io/FlagMaker-Jr/" class="btn btn-primary" target="_blank"><strong>FlagMaker Jr.</strong></a>
@@ -178,18 +183,20 @@
               <a href="mailto:njflagredesign@gmail.com">njflagredesign@gmail.com</a>
             </p>
             <img src="images/flag-1.jpg" class="img-responsive mini-flag" alt="NJ flag option 1">
-            </div>
-            <div class="col-md-6">
-              <h3 class="text-center">Join the campaign to give NJ the flag it deserves!</h3>
-              <p><em>We are collecting names to gauge the interest in changing the NJ flag.  If enough people show interest, we can make this happen!</em></p>
-              <a href="http://goo.gl/forms/HglHVrQAVUYo44WL2" class="btn btn-primary" role="button" target="_blank"><strong>Sign me up!</strong></a>
-            </div>
+          </article>
+          <article class="col-md-6">
+            <h3 class="text-center">Join the campaign to give NJ the flag it deserves!</h3>
+            <p><em>We are collecting names to gauge the interest in changing the NJ flag.  If enough people show interest, we can make this happen!</em></p>
+            <a href="http://goo.gl/forms/HglHVrQAVUYo44WL2" class="btn btn-primary" role="button" target="_blank"><strong>Sign me up!</strong></a>
+          </article>
         </div>
 
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    
     <!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
