@@ -137,10 +137,18 @@
               </h4>
             </div>
             <div class="modal-footer">
+              <div data-bind="if: contest" >
                 <small>Source:
                   <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank"><em>Vote for a new flag for New Jersey</em></a>
                   on <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">NJ.com</a>
                 </small>
+              </div>
+              <div data-bind="if: original" >
+                <small>Source: New design based on feedback from the
+                  <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank"><em>Vote for a new flag for New Jersey</em></a>
+                  contest on <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">NJ.com</a>
+                </small>
+              </div>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
