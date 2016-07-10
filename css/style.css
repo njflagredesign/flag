@@ -71,16 +71,16 @@ footer.jumbotron {
   margin:auto;
   width: 83.3%;
 }
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
+
+.flag {
+  
+}
+
+/* create 1/5 column to display flags */
+.col-md-5ths {
     position: relative;
     min-height: 1px;
     padding: 10px;
-}
-
-.col-xs-5ths {
     width: 20%;
     float: left;
 }
@@ -89,33 +89,18 @@ footer.jumbotron {
    clear: both;
  }
 
-
-@media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
+/* Very large desktops */
 @media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
+  .flag-row {
+    max-width: 1200px;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
   .flag {
-    margin: 20px auto;
+    margin: 0 auto;
   }
 
   .nj-pix,
@@ -132,4 +117,14 @@ footer.jumbotron {
     display: block;
   }
 
+  .col-md-5ths {
+    width: 50%;
+  }
+  
+  
+  .col-md-5ths:nth-child(6){
+   clear: none;
+ }
+}
+  
 }

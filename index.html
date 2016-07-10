@@ -107,79 +107,37 @@
 
       <div class="row text-center" >  
         <div data-bind="foreach: flags" class="flag-row">
-          <div class="col-md-5ths">
+          <div class="col-md-5ths col-sm-6">
             <img data-bind="attr:{src: image}, click: $parent.updateModal"class="img-responsive flag" /> 
           </div>
         </div>
       </div><!-- row -->
       
-      <div class="row text-center">
+      <div class="modal fade" id="flag-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Designed by <span data-bind="text: designer"></span><br>
+                <small><span data-bind="text: location"></span> </small></h4>
+            </div>
 
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-        <a href="#" data-toggle="modal" data-target="#flag1-modal">
-          <img src="images/flag-1.jpg" class="img-responsive flag" alt="NJ flag option 1">
-        </a>
-        </div>
-
-      <div class="col-md-2">
-          <img src="images/flag-2.jpg" class="img-responsive flag" alt="NJ flag option 2">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-3.jpg" class="img-responsive flag" alt="NJ flag option 3">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-4.jpg" class="img-responsive flag" alt="NJ flag option 4">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-5.jpg" class="img-responsive flag" alt="NJ flag option 5">
-        </div>
-        <div class="col-md-1"></div>
-
-      </div><!-- row -->
-
-      <div class="row text-center top-buffer">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-          <img src="images/flag-6.jpg" class="img-responsive flag" alt="NJ flag option 6">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-7.jpg" class="img-responsive flag" alt="NJ flag option 7">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-8.jpg" class="img-responsive flag" alt="NJ flag option 8">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-9.jpg" class="img-responsive flag" alt="NJ flag option 9">
-        </div>
-        <div class="col-md-2">
-          <img src="images/flag-10.jpg" class="img-responsive flag" alt="NJ flag option 10">
-        </div>
-        <div class="col-md-1"></div>
-      </div><!-- row -->
-
-      
-      
-<div class="modal fade" id="flag-modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title">Designed by <span data-bind="text: designer"></span> - 
-          <span data-bind="text: location"></span></h4>
-      </div>
-      <div class="modal-body">
-        <img data-bind="attr:{src: image}"class="img-responsive flag" /> 
-        <p data-bind="text: description"></p>
-      </div>
-      <div class="modal-footer">
-          <small> Read more on <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">NJ.com</a></small>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->      
+            <div class="modal-body">
+              <img data-bind="attr:{src: image}"class="img-responsive flag" />
+                          <hr>
+              <p data-bind="text: description"></p>
+            </div>
+            <div class="modal-footer">
+                <small>Source: 
+                  <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank"><em>Vote for a new flag for New Jersey</em></a>
+                  on <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">NJ.com</a>
+                </small>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->      
       
       
       
