@@ -105,11 +105,11 @@
       <div class="row text-center" >
         <div data-bind="foreach: flags" class="flag-row">
           <div class="col-sm-3">
-            <img data-bind="attr:{src: image}, click: $parent.updateModal" class="img-responsive flag" alt="Redesigned NJ Flag" />
+            <img data-bind="attr:{src: image}, click: $parent.openModal" class="img-responsive flag" alt="Redesigned NJ Flag" />
           </div>
         </div>
       </div><!-- row -->
-            
+
       <!-- modal -->
       <div class="modal fade" id="flag-modal">
         <div class="modal-dialog" role="document">
@@ -125,9 +125,10 @@
               <img data-bind="attr:{src: image}" class="img-responsive flag" alt="Redesigned NJ Flag" />
               <hr>
               <p data-bind="text: description"></p>
-              <h4 data-bind="visible: showAll" class="text-center">See all of
+
+              <h4 data-bind="if: showLink" class="text-center">See all of
                   <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">
-                    <strong>The 100 best NJ flag redesigns</strong>
+                    <strong>The 100s best NJ flag redesigns</strong>
                   </a>
                   on
                   <a href="http://www.nj.com/entertainment/index.ssf/2016/02/vote_for_a_new_flag_for_new_jersey.html" target="_blank">
@@ -158,20 +159,7 @@
       </article>
     </section> <!-- /container -->
 
-    <section class="container">
-      <div class="row text-center bottom-buffer top-buffer">
-        <article class="col-md-6">
-          <h3>See all 300+ contest submissions</h3>
-            <iframe width="480" height="270" src="https://www.youtube.com/embed/qjrZ_NuzYZA" frameborder="0" allowfullscreen></iframe>
-        </article>
-        <article class="col-md-6">
-          <h3>The winner is unfurled!</h3>
-            <iframe width="480" height="270" src="https://www.youtube.com/embed/8_9sawUXuFM" frameborder="0" allowfullscreen></iframe>
-        </article>
-      </div>
-    </section> <!-- /container -->
-
-    <footer  class="container blue-flag">
+    <footer  class="container">
         <div class="row text-center bottom-buffer">
           <article class="col-md-6">
             <h3>Want to make your own flag?</h3>

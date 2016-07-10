@@ -1,5 +1,5 @@
-"use strict"
-// modal footer links
+
+
 var njdotcomContest = '<a href="http://www.nj.com/entertainment/index.ssf/2016/02/' +
                       'vote_for_a_new_flag_for_new_jersey.html" target="_blank">' +
                       '<em>Vote for a new flage for New Jersey<em></a>' + 'posted by' +
@@ -11,7 +11,6 @@ var original = 'Designed based on feedback from the <a href="http://www.nj.com/e
                       'vote_for_a_new_flag_for_new_jersey.html" target="_blank">' +
                       '<em>NJ.com flag design content<em></a>';
 
-// flag data
 var flagList = [
   {
     designer: "Nick Hawke and Andrew Maris",
@@ -20,6 +19,7 @@ var flagList = [
     description:"This flag uses the graphic story of the NJ militia uniform in " +
         " Andrew's original design and replaces with red and blue with the " +
         " traditional blue and buff New Jersey colors.",
+    showAll: false,
     source: original
   },
   {
@@ -117,24 +117,25 @@ var flagList = [
     designer: "",
     location:"",
     image: "images/100-best.jpg",
-    showAll: true,
-    button: "", 
+    description:"",
+    showLink: true,
     source: njdotcomContest
   }
 ];
 
-//Knockout View Model
+
+
 function ViewModel(){
 
   var self = this;
 
   self.flags = ko.observableArray();
-  
   self.designer = ko.observable();
   self.location = ko.observable();
   self.image = ko.observable();
   self.description = ko.observable();
-
+  self.showLink = ko.observable(false);
+  
   flagList.forEach( function( flag ){
     self.flags.push( flag );
   });
@@ -144,6 +145,7 @@ function ViewModel(){
     self.location( flag.location );
     self.image( flag.image );
     self.description( flag.description );
+    self.showLink(flag.showLink);
     $('#flag-modal').modal();
   };
 
